@@ -37,6 +37,7 @@ $guessString = array_fill(0, $number_of_letters, "_");
 
 while($lives > 0){
     $thisLetter = readline("Guess a letter: ");
+    alphabetLeft($alphabet_left, $thisLetter);
     if (in_array($thisLetter,$guessWord)){
         $guessString = replaceAll($guessString, $guessWord,
             $thisLetter);
@@ -58,5 +59,18 @@ if ($lives > 0) {
     print($scoreText);
     fwrite($fout, $scoreText);
     fclose($fout);
+}
+
+function alphabetLeft($alphabet, $letter)
+{
+    if (in_array($letter, $alphabet))
+    {
+        print "True";
+    }
+    else{
+        print "False";
+        array_push($alphabet, $letter);
+        print_r($alphabet);
+    }
 }
 
