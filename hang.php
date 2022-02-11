@@ -1,5 +1,7 @@
 <?php
 
+
+
 function getWords($number_of_letters)
 {
     $wordsFound = [];
@@ -22,6 +24,9 @@ function replaceAll($guessString, $guessWord, $thisLetter){
 }
 const LIVES = 6;
 $lives = LIVES;
+$alphabet_left = array();
+
+
 $number_of_letters = readline("Enter the word length: ");
 $words = getWords($number_of_letters);
 printf ("There are %s words with %s letters\n", count($words),

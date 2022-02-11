@@ -1,0 +1,6 @@
+version: "3"
+services:
+  php_dev:
+    image: php
+    volumes:
+     - .:/root
