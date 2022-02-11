@@ -59,4 +59,8 @@ if ($lives > 0) {
     fwrite($fout, $scoreText);
     fclose($fout);
 }
+function alphabet_track()
+{
+print "hi";
+}
 
