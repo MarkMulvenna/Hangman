@@ -24,7 +24,7 @@ function replaceAll($guessString, $guessWord, $thisLetter){
 }
 const LIVES = 6;
 $lives = LIVES;
-$alphabet_left = array_fill(range('A', 'Z'));
+$alphabet_left = range('a', 'z');
 
 
 $number_of_letters = readline("Enter the word length: ");
@@ -66,6 +66,8 @@ function alphabetLeft($alphabet, $letter)
     if (in_array($letter, $alphabet))
     {
         print "True";
+        print_r($alphabet);
+
     }
     else{
         print "False";
